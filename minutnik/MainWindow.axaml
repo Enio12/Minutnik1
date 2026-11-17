@@ -37,6 +37,8 @@
                    FontWeight="Medium"
                    HorizontalAlignment="Center" />
 
+        <ListBox Name="HistoryList" Height="90" Width="260" />
+
         <!-- Ustawienia czasu pracy i przerwy -->
         <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto" Margin="0,8" HorizontalAlignment="Center">
             <TextBlock Grid.Row="0" Grid.Column="0"

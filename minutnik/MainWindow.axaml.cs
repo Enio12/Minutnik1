@@ -13,6 +13,7 @@ public partial class MainWindow : Window
     private int _breakMinutes = 5;
     private int _remainingSeconds = 25 * 60;
     private int _cycles = 0;
+    private readonly List<string> _history = new();
     private bool _isBreak = false;
     private bool _isRunning = false;
 
@@ -75,6 +76,8 @@ public partial class MainWindow : Window
             {
                 // Work session ended -> break starts automatically
                 _cycles++;
+                _history.Add($"{DateTime.Now:HH:mm} — cykl {_cycles}");
+                HistoryList.ItemsSource = _history.ToArray();
                 UpdateCyclesDisplay();
 
                 _isBreak = true;
